@@ -107,10 +107,12 @@ namespace Microsoft.Generator.CSharp.ClientModel.Providers
 
         private IEnumerable<MethodBodyStatement> GetStackVariablesForProtocolParamConversion(IReadOnlyList<ParameterProvider> convenienceMethodParameters, out Dictionary<string, ValueExpression> declarations)
         {
+            var test = "dosomething";
             List<MethodBodyStatement> statements = new List<MethodBodyStatement>();
             declarations = new Dictionary<string, ValueExpression>();
             foreach (var parameter in convenienceMethodParameters)
             {
+                var useTest = test;
                 if (parameter.SpreadSource is not null)
                     continue;
 
